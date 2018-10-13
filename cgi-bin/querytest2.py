@@ -11,7 +11,10 @@ html_body = u"""
 </body>
 </html>"""
 content=''
-for cnt,item in enumerate(form.getvalue('language')):
+#getlist(tname)
+#getfirst(tname)
+#getvalue
+for cnt,item in enumerate(form.getlist('language')):
     content+="%d : %s <br>" % (cnt+1,item)
 print("Content-type: text/html\n")
 print((html_body % content))
